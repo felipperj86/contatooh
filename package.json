@@ -1,0 +1,28 @@
+{
+  "name": "contatooh",
+  "version": "1.0.0",
+  "description": "Aprender MEAN, exemplo do livro da casa do código",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipperj86/contatooh.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "MongoDB",
+    "AngularJS",
+    "Express"
+  ],
+  "author": "felipperj86",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipperj86/contatooh/issues"
+  },
+  "homepage": "https://github.com/felipperj86/contatooh#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
