@@ -1,0 +1,28 @@
+{
+  "name": "contatooh",
+  "description": "Aprender MEAN, exemplo do livro da casa do código",
+  "main": "index.js",
+  "authors": [
+    "felipperj86"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "NodeJs",
+    "MongoDB",
+    "AngularJS",
+    "Express"
+  ],
+  "homepage": "https://github.com/felipperj86/contatooh",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.0-rc.1",
+    "angular-route": "^1.4.9"
+  }
+}
