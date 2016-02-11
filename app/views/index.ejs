@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contatooh">
+<head>
+    <meta charset="UTF-8">
+    <title>Contatooh</title>
+    <link rel="stylesheet" href="../../public/vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/vendor/bootstrap/dist/css/bootstrap-theme.css">
+</head>
+    <body class="container">
+        <h1>Bem-vindo ao Contatooh</h1>
+        <%if (usuarioLogado.length > 0) { %>
+            <div class="text-right">
+                <p>
+                    Logado como: <span id="usuario-logado"><%=usuarioLogado %></span>
+                    <a href="/logout">Logout</a>
+                </p>
+            </div>
+        <% } %>
+        <div ng-view></div>
+
+        <script src="../../public/vendor/angular/angular.js"></script>
+        <script src="../../public/vendor/angular-route/angular-route.js"></script>
+        <script src="../../public/vendor/angular-resource/angular-resource.js"></script>
+
+        <script src="../../public/js/main.js"></script>
+        <script src="../../public/js/controllers/ContatosController.js"></script>
+        <script src="../../public/js/controllers/ContatoController.js"></script>
+        <script src="../../public/js/services/ContatoService.js"></script>
+        <script src="../../public/js/services/InterceptorService.js"></script>
+    </body>
+</html>
