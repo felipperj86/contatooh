@@ -11,7 +11,7 @@ module.exports = function() {
         },
         nome: {
             type: String,
-            required: true,
+            required: true
         },
         inclusao: {
             type: Date,
