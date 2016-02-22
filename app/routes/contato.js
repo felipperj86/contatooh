@@ -1,17 +1,31 @@
-function verificaAutenticacao(req, res, next) {
-    if (req.isAuthenticated()) {
+function verificarAutenticacao(req, res, next){
+
+    console.log("verificarAutenticacao");
+
+    if(req.isAuthenticated()){
+
+        console.log("isAuthenticated");
+
         return next();
     } else {
-        res.status('401').json('Não autorizado');
+
+        console.log("Não Autorizado");
+
+        res.status("401").json("Não Autorizado");
     }
 }
 
-module.exports = function(app) {
+
+module.exports = function(app){
+
     var controller = app.controllers.contato;
-    app.route('/contatos')
-        .get(verificaAutenticacao, controller.listaTodos)
-        .post(verificaAutenticacao, controller.salvaContato);
-    app.route('/contatos/:id')
-        .get(verificaAutenticacao, controller.obtemContato)
-        .delete(verificaAutenticacao, controller.removeContato);
-};
+
+    app.route("/contatos")
+        .get(verificarAutenticacao, controller.listaContatos)
+        .post(verificarAutenticacao, controller.salvaContato);
+
+
+    app.route("/contatos/:id")
+        .get(verificarAutenticacao, controller.obtemContato)
+        .delete(verificarAutenticacao, controller.removeContato);
+};  
